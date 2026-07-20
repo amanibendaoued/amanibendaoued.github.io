@@ -2,19 +2,1184 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Amani Bendaoued | Professional Portfolio</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Professional portfolio of Amani Bendaoued, a multilingual Global MBA candidate based in Seoul."
+  >
+
+  <title>Amani Bendaoued | Global MBA Portfolio</title>
+
+  <style>
+    :root {
+      --navy: #14213d;
+      --blue: #254c77;
+      --cream: #f7f4ee;
+      --white: #ffffff;
+      --text: #222831;
+      --muted: #657080;
+      --border: #dfe4ea;
+      --light-blue: #edf3f8;
+      --shadow: 0 16px 40px rgba(20, 33, 61, 0.08);
+      --radius: 18px;
+      --max-width: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--white);
+      color: var(--text);
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(90%, var(--max-width));
+      margin: 0 auto;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav-content {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .logo {
+      color: var(--navy);
+      font-size: 1.1rem;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: var(--blue);
+    }
+
+    .hero {
+      background:
+        radial-gradient(
+          circle at top right,
+          rgba(37, 76, 119, 0.15),
+          transparent 38%
+        ),
+        linear-gradient(135deg, #f9fafc, var(--cream));
+      padding: 105px 0 90px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 0.8fr;
+      align-items: center;
+      gap: 70px;
+    }
+
+    .eyebrow {
+      margin-bottom: 18px;
+      color: var(--blue);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 800px;
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(3rem, 7vw, 5.6rem);
+      font-weight: 500;
+      line-height: 1.03;
+    }
+
+    .hero-subtitle {
+      max-width: 760px;
+      margin-top: 25px;
+      color: var(--blue);
+      font-size: clamp(1.15rem, 2vw, 1.5rem);
+      font-weight: 650;
+      line-height: 1.45;
+    }
+
+    .hero-description {
+      max-width: 720px;
+      margin-top: 21px;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 49px;
+      padding: 0 23px;
+      border: 1px solid var(--navy);
+      border-radius: 100px;
+      font-weight: 750;
+      transition: 0.2s ease;
+    }
+
+    .button-primary {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .button-primary:hover {
+      background: var(--blue);
+      border-color: var(--blue);
+      transform: translateY(-2px);
+    }
+
+    .button-secondary:hover {
+      background: var(--navy);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    .hero-card {
+      background: var(--white);
+      border: 1px solid rgba(20, 33, 61, 0.08);
+      border-radius: 28px;
+      padding: 34px;
+      box-shadow: var(--shadow);
+    }
+
+    .monogram {
+      width: 88px;
+      height: 88px;
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--navy);
+      border-radius: 50%;
+      color: var(--white);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.9rem;
+    }
+
+    .hero-card h2 {
+      margin-bottom: 10px;
+      color: var(--navy);
+      font-size: 1.25rem;
+    }
+
+    .hero-card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .location {
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    section {
+      padding: 90px 0;
+    }
+
+    .section-alt {
+      background: var(--cream);
+    }
+
+    .section-heading {
+      display: grid;
+      grid-template-columns: 0.6fr 1.4fr;
+      gap: 70px;
+      margin-bottom: 48px;
+    }
+
+    .section-label {
+      color: var(--blue);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    .section-intro {
+      max-width: 780px;
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 1.04rem;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-top: 44px;
+    }
+
+    .stat {
+      padding: 28px 24px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .stat strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--navy);
+      font-size: 1.75rem;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 20px;
+    }
+
+    .timeline-card {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 36px;
+      padding: 34px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: 0 8px 25px rgba(20, 33, 61, 0.04);
+    }
+
+    .timeline-date {
+      color: var(--blue);
+      font-size: 0.86rem;
+      font-weight: 750;
+    }
+
+    .timeline-content h3 {
+      margin-bottom: 3px;
+      color: var(--navy);
+      font-size: 1.2rem;
+    }
+
+    .organization {
+      margin-bottom: 14px;
+      color: var(--muted);
+      font-size: 0.94rem;
+      font-style: italic;
+    }
+
+    .timeline-content ul {
+      padding-left: 19px;
+      color: var(--muted);
+    }
+
+    .timeline-content li + li {
+      margin-top: 7px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      padding: 30px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: 0.2s ease;
+    }
+
+    .card:hover {
+      box-shadow: var(--shadow);
+      transform: translateY(-4px);
+    }
+
+    .card-number {
+      margin-bottom: 25px;
+      color: var(--blue);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.4rem;
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      color: var(--navy);
+      font-size: 1.12rem;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .education-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 26px;
+    }
+
+    .education-card {
+      padding: 34px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .education-card + .education-card {
+      margin-top: 20px;
+    }
+
+    .education-card h3 {
+      margin-bottom: 7px;
+      color: var(--navy);
+      font-size: 1.17rem;
+    }
+
+    .education-meta {
+      margin-bottom: 15px;
+      color: var(--blue);
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .education-card p {
+      color: var(--muted);
+    }
+
+    .highlight-box {
+      height: 100%;
+      padding: 38px;
+      background: var(--navy);
+      border-radius: var(--radius);
+      color: var(--white);
+    }
+
+    .highlight-box h3 {
+      margin-bottom: 20px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.85rem;
+      font-weight: 500;
+    }
+
+    .highlight-box ul {
+      padding-left: 19px;
+      color: rgba(255, 255, 255, 0.82);
+    }
+
+    .highlight-box li + li {
+      margin-top: 13px;
+    }
+
+    .development-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .development-item {
+      padding: 27px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .development-item h3 {
+      margin-bottom: 7px;
+      color: var(--navy);
+      font-size: 1.08rem;
+    }
+
+    .development-item .issuer {
+      margin-bottom: 13px;
+      color: var(--blue);
+      font-size: 0.89rem;
+      font-weight: 750;
+    }
+
+    .development-item p {
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 26px;
+    }
+
+    .skill-group {
+      padding: 30px;
+      background: var(--light-blue);
+      border-radius: var(--radius);
+    }
+
+    .skill-group h3 {
+      margin-bottom: 20px;
+      color: var(--navy);
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tag {
+      padding: 9px 14px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      color: var(--text);
+      font-size: 0.88rem;
+      font-weight: 650;
+    }
+
+    .language-list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-top: 30px;
+    }
+
+    .language {
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      text-align: center;
+    }
+
+    .language strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--navy);
+    }
+
+    .language span {
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    footer {
+      padding: 42px 0;
+      background: var(--navy);
+      color: rgba(255, 255, 255, 0.75);
+      text-align: center;
+    }
+
+    footer strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--white);
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .section-heading,
+      .education-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .stats,
+      .cards,
+      .language-list {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .timeline-card {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .nav-content {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 18px 0;
+      }
+
+      .nav-links {
+        gap: 13px;
+        font-size: 0.8rem;
+      }
+
+      .hero {
+        padding: 72px 0;
+      }
+
+      section {
+        padding: 70px 0;
+      }
+
+      .hero-grid {
+        gap: 42px;
+      }
+
+      .stats,
+      .cards,
+      .development-list,
+      .skills-grid,
+      .language-list {
+        grid-template-columns: 1fr;
+      }
+
+      .timeline-card,
+      .education-card,
+      .highlight-box {
+        padding: 25px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <h1>Amani Bendaoued</h1>
 
-  <p>
-    Global MBA Candidate | International Programs,
-    Business Operations & Cross-Cultural Communication
-  </p>
+  <nav>
+    <div class="container nav-content">
+      <a class="logo" href="#top">AB</a>
 
-  <p>Professional portfolio currently under development.</p>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#engagements">Engagements</a>
+        <a href="#education">Education</a>
+        <a href="#development">Development</a>
+        <a href="#skills">Skills</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="top">
+
+    <header class="hero">
+      <div class="container hero-grid">
+
+        <div>
+          <p class="eyebrow">Professional Portfolio</p>
+
+          <h1>Amani Bendaoued</h1>
+
+          <p class="hero-subtitle">
+            Global MBA Candidate | International Programs,
+            Business Operations & Cross-Cultural Communication
+          </p>
+
+          <p class="hero-description">
+            Multilingual business professional based in Seoul with
+            experience supporting executive-facing programs, academic
+            communities, stakeholder communication and multicultural
+            participant experiences.
+          </p>
+
+          <div class="hero-buttons">
+            <a class="button button-primary" href="#experience">
+              Explore Experience
+            </a>
+
+            <a class="button button-secondary" href="#education">
+              Academic Profile
+            </a>
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <div class="monogram">AB</div>
+
+          <h2>Global perspective. Structured execution.</h2>
+
+          <p>
+            Combining an education background with graduate business
+            training, leadership experience and professional fluency
+            across multicultural environments.
+          </p>
+
+          <p class="location">Seoul, Republic of Korea</p>
+        </aside>
+
+      </div>
+    </header>
+
+    <section id="about">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="section-label">About</p>
+
+          <div>
+            <h2>Connecting people, programs and ideas across cultures.</h2>
+
+            <p class="section-intro">
+              Amani is completing a Global MBA at Chung-Ang University
+              after beginning her career in education. Her experience
+              now spans program coordination, event operations,
+              stakeholder communication, student leadership and
+              Korean–English interpretation.
+            </p>
+          </div>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <strong>12 A+</strong>
+            <span>Across 15 MBA courses</span>
+          </div>
+
+          <div class="stat">
+            <strong>3 A0</strong>
+            <span>Remaining MBA course grades</span>
+          </div>
+
+          <div class="stat">
+            <strong>TOPIK 5</strong>
+            <span>Advanced Korean proficiency</span>
+          </div>
+
+          <div class="stat">
+            <strong>4</strong>
+            <span>Professional languages</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="experience" class="section-alt">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="section-label">Experience</p>
+
+          <div>
+            <h2>Professional and leadership experience.</h2>
+
+            <p class="section-intro">
+              Experience supporting programs, events, university
+              communities and participants in international and
+              executive-facing settings.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline">
+
+          <article class="timeline-card">
+            <div class="timeline-date">September 2025 — Present</div>
+
+            <div class="timeline-content">
+              <h3>Representative & Marketing Coordinator</h3>
+
+              <p class="organization">
+                CAU Career Acceleration Program — Chung-Ang University
+              </p>
+
+              <ul>
+                <li>
+                  Supports end-to-end guest and participant experiences
+                  for flagship programs and events.
+                </li>
+
+                <li>
+                  Represents the program through Korean and English
+                  communication with executives, speakers, alumni and
+                  international participants.
+                </li>
+
+                <li>
+                  Coordinates invitations, schedules, guest reception,
+                  event communication and on-site service flow.
+                </li>
+
+                <li>
+                  Develops marketing and communication materials aligned
+                  with institutional branding.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-card">
+            <div class="timeline-date">March 2025 — June 2025</div>
+
+            <div class="timeline-content">
+              <h3>Teaching Assistant</h3>
+
+              <p class="organization">
+                Undergraduate Business Department — Chung-Ang University
+              </p>
+
+              <ul>
+                <li>
+                  Provided Korean–English simultaneous interpretation
+                  during orientation for more than 50 students.
+                </li>
+
+                <li>
+                  Served as a communication bridge between faculty,
+                  administration and international students.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-card">
+            <div class="timeline-date">March 2025 — June 2025</div>
+
+            <div class="timeline-content">
+              <h3>Vice President</h3>
+
+              <p class="organization">
+                CAU Global MBA Student Council
+              </p>
+
+              <ul>
+                <li>
+                  Supported the planning and delivery of student events
+                  and community activities.
+                </li>
+
+                <li>
+                  Assisted with communication and coordination to
+                  strengthen participation and student engagement.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-card">
+            <div class="timeline-date">February 2025 — August 2025</div>
+
+            <div class="timeline-content">
+              <h3>MBA Department Student Representative</h3>
+
+              <p class="organization">
+                Chung-Ang University
+              </p>
+
+              <ul>
+                <li>
+                  Served as a liaison between students and administrative
+                  offices.
+                </li>
+
+                <li>
+                  Helped improve information flow and supported academic
+                  and community-building activities.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-card">
+            <div class="timeline-date">September 2021 — August 2023</div>
+
+            <div class="timeline-content">
+              <h3>Elementary School Teacher</h3>
+
+              <p class="organization">
+                Ministry of Education and Teaching — Tunisia
+              </p>
+
+              <ul>
+                <li>
+                  Delivered structured lessons in a positive, respectful
+                  and supportive learning environment.
+                </li>
+
+                <li>
+                  Built long-term trust with students and families
+                  through consistent and empathetic communication.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="engagements">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="section-label">Selected Engagements</p>
+
+          <div>
+            <h2>Events, company visits and industry exposure.</h2>
+
+            <p class="section-intro">
+              Selected activities complementing Amani's academic and
+              professional development in South Korea.
+            </p>
+          </div>
+        </div>
+
+        <div class="cards">
+
+          <article class="card">
+            <p class="card-number">01</p>
+
+            <h3>Executive Panel & Networking Dinner</h3>
+
+            <p>
+              Supported program communication, participant coordination
+              and on-site delivery for an executive-facing panel
+              discussion and networking dinner.
+            </p>
+          </article>
+
+          <article class="card">
+            <p class="card-number">02</p>
+
+            <h3>Company Visits</h3>
+
+            <p>
+              Participated in professional company visits to IFC and
+              Orange Square/WOWPASS through the Career Acceleration
+              Program.
+            </p>
+          </article>
+
+          <article class="card">
+            <p class="card-number">03</p>
+
+            <h3>Academic Brand Analysis</h3>
+
+            <p>
+              Conducted an MBA academic analysis exploring symbolic
+              value, storytelling and consumer perception within luxury
+              brand contexts.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="section-alt">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="section-label">Education</p>
+
+          <div>
+            <h2>Academic foundation and graduate business training.</h2>
+          </div>
+        </div>
+
+        <div class="education-grid">
+
+          <div>
+            <article class="education-card">
+              <h3>Global MBA</h3>
+
+              <p class="education-meta">
+                Chung-Ang University, Seoul | 2024–2026
+              </p>
+
+              <p>
+                Coursework includes Marketing Research, Operations
+                Management, Management Science, Information Systems and
+                Financial Accounting.
+              </p>
+            </article>
+
+            <article class="education-card">
+              <h3>Korean Language Program</h3>
+
+              <p class="education-meta">
+                Chung-Ang University, Seoul | 2023–2024
+              </p>
+
+              <p>
+                Intensive language training focused on academic writing,
+                business communication and cultural fluency.
+              </p>
+            </article>
+
+            <article class="education-card">
+              <h3>Bachelor of Education and Teaching</h3>
+
+              <p class="education-meta">
+                University of Gabes, Tunisia | 2018–2021
+              </p>
+
+              <p>
+                Thesis: “Mobile School: Teaching Behind Stereotypes,”
+                exploring inclusive education for children in rural and
+                underserved communities.
+              </p>
+            </article>
+          </div>
+
+          <aside class="highlight-box">
+            <h3>Academic highlights</h3>
+
+            <ul>
+              <li>
+                Earned 12 A+ and 3 A0 grades across 15 Global MBA
+                courses.
+              </li>
+
+              <li>
+                Built multidisciplinary knowledge across finance,
+                operations, marketing, information systems and research.
+              </li>
+
+              <li>
+                Completed academic work in brand analysis, consumer
+                perception and management-related subjects.
+              </li>
+
+              <li>
+                Currently strengthening financial modelling and
+                analytical capabilities through FMVA studies.
+              </li>
+            </ul>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="development">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="section-label">Professional Development</p>
+
+          <div>
+            <h2>Certificates, training and continuous learning.</h2>
+
+            <p class="section-intro">
+              Structured training and professional learning supporting
+              Amani's transition into international business roles.
+            </p>
+          </div>
+        </div>
+
+        <div class="development-list">
+
+          <article class="development-item">
+            <h3>International Student Job Training Weekend</h3>
+
+            <p class="issuer">
+              National Institute for International Education
+            </p>
+
+            <p>
+              Completed a certified employment-preparation program for
+              international students pursuing professional opportunities
+              in South Korea.
+            </p>
+          </article>
+
+          <article class="development-item">
+            <h3>AI & Innovation Seminar</h3>
+
+            <p class="issuer">
+              Certificate of Attendance — The Shilla Seoul
+            </p>
+
+            <p>
+              Participated in a professional seminar exploring current
+              developments in artificial intelligence, innovation and
+              the Seoul business ecosystem.
+            </p>
+          </article>
+
+          <article class="development-item">
+            <h3>Design Thinking & Global Startup</h3>
+
+            <p class="issuer">KAIST — Coursera</p>
+
+            <p>
+              Developed foundational knowledge in user-centred
+              innovation, problem solving and global startup thinking.
+            </p>
+          </article>
+
+          <article class="development-item">
+            <h3>International Hospitality & Services Marketing</h3>
+
+            <p class="issuer">Yonsei University — Coursera</p>
+
+            <p>
+              Studied customer experience, service delivery and
+              international hospitality marketing.
+            </p>
+          </article>
+
+          <article class="development-item">
+            <h3>International Marketing Entry & Execution</h3>
+
+            <p class="issuer">Yonsei University — Coursera</p>
+
+            <p>
+              Explored international market entry, marketing execution
+              and cross-border business considerations.
+            </p>
+          </article>
+
+          <article class="development-item">
+            <h3>TOPIK Level 5</h3>
+
+            <p class="issuer">Total score: 198/300</p>
+
+            <p>
+              Demonstrated advanced Korean-language proficiency for
+              academic, professional and cross-cultural environments.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section-alt">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="section-label">Skills</p>
+
+          <div>
+            <h2>Coordination, communication and digital capabilities.</h2>
+          </div>
+        </div>
+
+        <div class="skills-grid">
+
+          <div class="skill-group">
+            <h3>Professional Skills</h3>
+
+            <div class="tags">
+              <span class="tag">Program Operations</span>
+              <span class="tag">Event Coordination</span>
+              <span class="tag">Stakeholder Communication</span>
+              <span class="tag">Guest Experience</span>
+              <span class="tag">Cross-Cultural Communication</span>
+              <span class="tag">Marketing Coordination</span>
+              <span class="tag">Community Engagement</span>
+              <span class="tag">Performance Tracking</span>
+              <span class="tag">Korean–English Interpretation</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h3>Technical Tools</h3>
+
+            <div class="tags">
+              <span class="tag">Microsoft Office</span>
+              <span class="tag">Google Workspace</span>
+              <span class="tag">Canva</span>
+              <span class="tag">Instagram Insights</span>
+              <span class="tag">Trello</span>
+              <span class="tag">Notion</span>
+              <span class="tag">GitHub Pages</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="language-list">
+
+          <div class="language">
+            <strong>Arabic</strong>
+            <span>Native</span>
+          </div>
+
+          <div class="language">
+            <strong>English</strong>
+            <span>Fluent</span>
+          </div>
+
+          <div class="language">
+            <strong>Korean</strong>
+            <span>Advanced — TOPIK 5</span>
+          </div>
+
+          <div class="language">
+            <strong>French</strong>
+            <span>Fluent</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <strong>Amani Bendaoued</strong>
+
+      <p>
+        Global MBA Candidate · Seoul, Republic of Korea
+      </p>
+    </div>
+  </footer>
+
 </body>
 </html>
